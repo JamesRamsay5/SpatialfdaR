@@ -1,0 +1,19 @@
+Package: SpatialfdaR
+Type: Package
+Date: 2021-12-23
+Version: 1.0.0
+Title: Spatial Functional Data Analysis
+Author: James Ramsay [aut,cre]
+Maintainer: James Ramsay <james.ramsay@mcgill.ca>
+Depends: R (>= 3.5.0), fda, splines, graphics, rgl, geometry
+Description: Spatial functional data analyses using an order one or
+    order two finite element analysis.  The finite elements are 
+    triangles and the basis is called the FEM basis.
+License: GPL (>= 2)
+URL: http://www.functionaldata.org
+LazyData: true
+Imports: 
+  knitr,
+  rmarkdown
+VignetteBuilder: knitr
+Language: en-US
