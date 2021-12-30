@@ -1,0 +1,310 @@
+q()
+help(image)
+source("/Users/jamesramsay/Documents/R/pkg/R/create.bspline.basis.R")
+q()
+source("/Users/jamesramsay/Documents/R/pkg/R/fRegress.R")
+q()
+library(sos)
+library(gstat)
+help("gstat")
+library(gstat)
+library("gstat")
+gstat
+demos
+demos()
+demo()
+library(gstat)
+help(gstat)
+gstat
+index(gstat)
+q()
+library(sos)
+library(brew)
+findFn("triquad")
+library("sos")
+findFn("triquad")
+library(pracma)
+help("pracma")
+q()
+library(fda)
+help(fdplot)
+help(fbplot)
+chwd
+q()
+quit;
+q()
+library(CollocInfer)
+demo()
+help(library)
+q()
+library(fda)
+help(Matrix)
+q()
+help("R.cache")
+library("R.cache")
+library("R-cache")
+install.packages("R.cache",dependencies=TRUE)
+library("rgl")
+clear
+clc
+library('rgl')
+ls()
+save.image()
+getwd()
+githunb("eardi/FEMr")
+install_github("eardi/FEMr")
+library("devtools")
+install_github("eardi/FEMr")
+library('rgl')
+install_github("eardi/FEMr")
+install("devtools")
+library("devtools")
+install_github("eardi/FEMr")
+install.packages("devtools")
+library("devtools")
+install_github("eardi/FEMr")
+library("devtools")
+install_github("eardi/FEMr")
+help("meuse")
+help("Meuse")
+data
+data()
+library("FEMr")
+library("rFEM")
+library("FEMr")
+help("meuse")
+help("Meuse")
+demo("FEMr")
+help("MeuseData")
+library("sos")
+findFn("Joliffe")
+help("nFactors")
+??nfactors
+data("nFactors")
+demo("nFactors")
+data("nFactors-package")
+library("nFactors")
+library("psych")
+library("mnormt")
+data("nFactpors")
+data("nFactors")
+data()
+data(package = .packages(all.available = TRUE))
+help("cpus")
+summary(cpus)
+help(solve)
+q()
+21*40*52
+365/7
+21*40*365/7
+15.5/55
+15808/0.22
+15808/0.282
+56056/3
+library(sos)
+findFn(fbplot)
+findFn("fbplot")
+library("funFEM")
+library("fda")
+help("fbplot")
+q()
+(282-262)/282
+(592-569)/592
+(593-556)/593
+(518-471)/518
+(518-454)/518
+(282-244)/282
+(282-246)/282
+(592-498)/592
+(593-581)/593
+(593-481)/593
+(257-244)/257
+(257-246)/257
+4.3
+(509-498)509
+(509-498)/509
+(509-481)/509
+(261-244)/261
+(509-481)/509
+(508-454)/508
+(268-262)/268
+(185-182)/185
+(240-211)/240
+(176-165)/176
+(282-253)/282
+(219-184)/219
+(240-232)/240
+(261-248)/261
+library(CollocInfer)
+data(ChemoRMData)
+ChemoRMData
+time = ChemoRMTime#
+data = log(ChemoRMData)
+matplot(time, data)
+q()
+library(CollocInfer)
+ChemoRMPars
+ChemoRMbasis
+ChemoRmbasis
+q()
+help("islist")
+help("is.list")
+q()
+help(pryr)
+??pryr
+library(pryr)
+help(pryr)
+pryr
+q()
+source("~/Documents/R/pkg/R/inprod.R")
+q()
+library(mirt) # mirt needs to be installed
+help("mirt")
+q()
+library("mirt")
+help("mirt")
+quit;
+q()
+?library
+?INSTALL
+library()
+library(sos)
+help("findFn")
+findFn("3D graphics")
+help("rgl")
+??rgl
+demo(rgl)
+library()
+demo("rgl")
+library(rgl)
+file.show(system.file("NEWS", package = "rgl"))
+example(surface3D)
+example(surface3d)
+example(plot3d)
+help(rgl)
+library(rgl)
+help("rgl")
+help("Vectorize")
+vrep <- Vectorize(rep.int)#
+vrep(1:4, 4:1)#
+vrep(times = 1:4, x = 4:1)
+help("rgl")
+help("persp3d")
+help("surface3d")
+help("persp3d")
+x <- seq(-10, 10, length = 30)#
+y <- x#
+f <- function(x, y) { r <- sqrt(x^2 + y^2); 10 * sin(r)/r }#
+z <- outer(x, y, f)#
+z[is.na(z)] <- 1#
+open3d()#
+bg3d("white")#
+material3d(col = "black")#
+persp3d(x, y, z, aspect = c(1, 1, 0.5), col = "lightblue",#
+        xlab = "X", ylab = "Y", zlab = "Sinc( r )")
+xE <- c(-10, 10); xy <- expand.grid(xE, xE)#
+points3d(xy[, 1], xy[, 2], 6, col = "red")#
+lines3d(x, y = 10, z = 6 + sin(x), col = "green")#
+#
+phi <- seq(0, 2*pi, len = 201)#
+r1 <- 7.725 # radius of 2nd maximum#
+xr <- r1 * cos(phi)#
+yr <- r1 * sin(phi)#
+lines3d(xr, yr, f(xr, yr), col = "pink", lwd = 2)
+x <- seq(-10, 10, length = 30)#
+y <- x#
+f <- function(x, y) { r <- sqrt(x^2 + y^2); 10 * sin(r)/r }#
+z <- outer(x, y, f)#
+z[is.na(z)] <- 1#
+open3d()#
+bg3d("white")#
+material3d(col = "black")#
+persp3d(x, y, z, aspect = c(1, 1, 0.5), col = "lightblue",#
+        xlab = "X", ylab = "Y", zlab = "Sinc( r )")
+xE <- c(-10, 10); xy <- expand.grid(xE, xE)#
+points3d(xy[, 1], xy[, 2], 6, col = "red")#
+lines3d(x, y = 10, z = 6 + sin(x), col = "green")#
+#
+phi <- seq(0, 2*pi, len = 201)#
+r1 <- 7.725 # radius of 2nd maximum#
+xr <- r1 * cos(phi)#
+yr <- r1 * sin(phi)#
+lines3d(xr, yr, f(xr, yr), col = "pink", lwd = 2)
+# (3) Visualizing a simple DEM model#
+#
+z <- 2 * volcano        # Exaggerate the relief#
+x <- 10 * (1:nrow(z))   # 10 meter spacing (S to N)#
+y <- 10 * (1:ncol(z))   # 10 meter spacing (E to W)#
+#
+open3d()#
+bg3d("slategray")#
+material3d(col = "black")#
+persp3d(x, y, z, col = "green3", aspect = "iso",#
+      axes = FALSE, box = FALSE)
+x <- seq(-10, 10, length = 30)#
+y <- x#
+f <- function(x, y) { r <- sqrt(x^2 + y^2); 10 * sin(r)/r }#
+z <- outer(x, y, f)#
+z[is.na(z)] <- 1#
+open3d()#
+bg3d("white")#
+material3d(col = "black")#
+persp3d(x, y, z, aspect = c(1, 1, 0.5), col = "lightblue",#
+        xlab = "X", ylab = "Y", zlab = "Sinc( r )")
+q()
+> library(gstat)   > data(meuse)
+library(gstat)    data(meuse)
+library(gstat)
+library(gstat)    data(meuse)
+data(meuse)
+data(meuse.all)
+summary(meuse.all)
+meuse.dist.m
+meuse
+meuse.all
+q()
+help("fRegress")
+library("fda")
+help("fRegress")
+q()
+sqrt(0.039)/(2*pi)
+2*pi/sqrt(0.039)
+2*pi*1000/sqrt(0.39)
+1000/3.14
+sqrt(0.0383)/(2*pi)
+318.5/130.4
+q()
+622/0.78
+library("fda")
+conbasis = create.constant.basis(c(0,1))
+conmat = eval.basis(1:2,conbasis)
+conmat
+is.matrix(conmat)
+conmat = create.fourier.basis(c(0,1),1)
+is.matrix(conmat)
+fourbasis = create.fourier.basis(c(0,1),1)
+fourmat = eval.basis(1:2,fourbasis)
+fourmat
+help("[]")
+help("[")
+help("matrix")
+q()
+help(".C")
+library("Data2LD")
+demo
+demo()
+q()
+library("fda")
+daybasis65 <- create.fourier.basis(c(0, 365), 65)#
+#
+daytempfd <- with(CanadianWeather, smooth.basis(#
+       day.5,  dailyAv[,,"Temperature.C"], #
+       daybasis65, fdnames=list("Day", "Station", "Deg C"))$fd )
+print(data("CanadianWeather"))
+data()
+print(CanadianWeather)
+help("with")
+with(CanadianWeather,print(place))
+q()
+setwd("Documents/R/SpatialfdaR/man")
+q()
