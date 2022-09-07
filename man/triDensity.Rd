@@ -19,7 +19,7 @@ triDensity(pts, tri, logIntensFn, nquad=5)
   mesh.}
   \item{tri}{A three-column matrix indexing for each triangle its vertices.}
   \item{logIntensFn}{A function of \code{x} and \code{y} giving the surface height
-  for an un-normalized log density function.  It must return a square matrix
+  for an unnormalized log density function.  It must return a square matrix
   of order equal to \code{nquad}.  This implies that any multiplications
   must be pointwise.}
   \item{nquad}{The order of the quadrature over a triangle.  The default order

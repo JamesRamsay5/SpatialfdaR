@@ -29,8 +29,7 @@
     where the data are observed.
   }
   \item{FEMdata}{If a single surface, column vector containing the values to be 
-  smoothed.
-  Otherwise, a matrix of observation values that is number of pts by    
+  smoothed.  Otherwise, a matrix of observation values that is number of pts by    
   number of surfaces.}
   \item{FEMbasis}{
     Either (1) a functional basis object of the \code{FEM} type if the first
@@ -69,7 +68,7 @@
   is perhaps even more critical to the success of the smoothing process.
 
   Designing and refining the mesh is therefore a preliminary step in finite
-  element ssmoothing, and requires considerable care and effort.  Consult the
+  element smoothing, and requires considerable care and effort.  Consult the
   help pages for \code{MESH} and \code{create.FEM.basis} for more details.
 
   A roughness penalty is a quantitative measure of the roughness of a
@@ -84,7 +83,7 @@
   the bandwidth of smoothing parameter, and given the variable name
   \code{lambda} here.
 
-  The rougnhness penalty is added to the weighted error sum of squares
+  The roughness penalty is added to the weighted error sum of squares
   and the composite is minimized, usually in conjunction with a
   high dimensional basis expansion such as a spline function defined by
   placing a knot at every observation point.  Consequently, the

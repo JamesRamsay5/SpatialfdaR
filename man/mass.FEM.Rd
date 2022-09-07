@@ -14,22 +14,22 @@
   \item{FEMbasis}{A List object produced by function \code{create.FEM.basis}.
     It contains:
     \itemize{
-        \item{ORDER}{The order of the element (1 or 2).}
-        \item{NODES}{Coordinates of node points.}
-        \item{NODEINDEX}{Indices of node points for each element.}
-        \item{JVEC}{acobian of the affine transformation of each
+        \item{order}{The order of the element (1 or 2).}
+        \item{nodes}{Coordinates of node points.}
+        \item{nodeindex}{Indices of node points for each element.}
+        \item{jvec}{Jacobian of the affine transformation of each
                       element to the master element.}
     }
   }
 }
 \value{
-  A matrix \code{K0}: the \code{NNOD} by \code{NNOD} matrix of sums
+  A matrix \code{k0}: the \code{nnod} by \code{nnod} matrix of sums
   of products of nodal basis functions.
   For each element i, the integral of the product
   of the j'th and k'th shape functions over the i'th element is
-        computed.  Then that value is the
-        \code{(NODEINDEX[i,j],NODEINDEX[i,k])}th entry of the
-        	ith elemental mass matrix.
+  computed.  Then that value is the 
+  \code{(nodeindex[i,j],nodeindex[i,k])} entry of the i'th elemental 
+  mass matrix.
 }
 \references{
   Sangalli, Laura M., Ramsay, James O., Ramsay, Timothy O. (2013),

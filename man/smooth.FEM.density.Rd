@@ -12,7 +12,7 @@ multiplying the stiffness matrix.
 }
 \usage{
 smooth.FEM.density(obspts, cvec, FEMbasis, K1=NULL, lambda=0,
-                 conv=1e-4, iterlim=50, dbglev=0)
+                 conv=1e-4, iterlim=50, dbglev=FALSE)
 }
 \arguments{
   \item{obspts}{A two-column matrix with each row corresponding to a location within
@@ -32,10 +32,7 @@ smooth.FEM.density(obspts, cvec, FEMbasis, K1=NULL, lambda=0,
   of the surface by a roughness penalty consisting of \code{lambda}.}
   \item{conv}{The convergence criterion using the function value.}
   \item{iterlim}{The maximum number of permitted iterations.}
-  \item{dbglev}{A debugging output.
-  0: No output before convergence.
-  1: function value and gradient norm at each iteration.
-  2:  also the function value and slope at each linesearch iteration.}
+  \item{dbglev}{print debugging output.}
 }
 \details{
 The penalized log likelihood of a density surface is minimized with  respect to
@@ -51,6 +48,9 @@ multiplied by the roughness parameter \code{lambda.}}
 \item{Flist:}{A list object with \code{F} the final penalized log likelihood
 value, \code{grad} the final gradient and \code{norm} the final norm of the
 gradient.}
+\item{iterhist:}{A matrix with three columns displaying the iteration number,
+the function value and the norm of the gradient vector for the initial
+iteration and each subsequent iteration.}
 }
 \references{
   Sangalli, Laura M., Ramsay, James O., Ramsay, Timothy O. (2013),

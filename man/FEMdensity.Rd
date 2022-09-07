@@ -18,7 +18,7 @@ FEMdensity(cvec, obspts, FEMbasis, K1=NULL, lambda=0)
 \arguments{
   \item{cvec}{A matrix each column of which contains the coefficients
   for an FEM basis function expansion of a surface.
-  The number of coeffficients equals the number of vertices in the
+  The number of coefficients equals the number of vertices in the
   triangulation, also called the nodes of the FEM expansion.}
   \item{obspts}{A two-column matrix containing the locations at which the
   logarithm of the density is to be evaluated.}

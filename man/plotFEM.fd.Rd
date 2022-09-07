@@ -4,7 +4,7 @@
    Plots an FEM functional data object.
 }
 \description{
-  Plots a FEM object FDOBJ over a rectangular grid defined by
+  Plots a FEM object fdobj over a rectangular grid defined by
   vectors Xgrid and Ygrid.
 }
 \usage{
@@ -42,13 +42,14 @@
   \item{r}{A positive number for the distance of the eyepoint from the center
   of the plot when using function \code{persp}.
   }
-  \item{phi}{A number specifying the colatitude
+  \item{phi}{A number specifying the collatitude
   when using function \code{persp}.
   }
   \item{theta}{A number specifying the azimuthal direction
   when using function \code{persp}.
   }
 }
+\value{No return value, called for side effects.}
 \seealso{
   \code{\link{plotFEM.mesh}},
   \code{\link{eval.FEM.fd}}
@@ -75,6 +76,8 @@ Npts <- 21
 Xpts <- seq(0,1,len=Npts)
 Ypts <- Xpts
 #  plot the surface
+oldpar <- par(no.readonly = TRUE)    
+on.exit(par(oldpar))            
 plotFEM.fd(sincosfd, Xpts, Ypts)
 #  plot the X partial derivative of the surface
 plotFEM.fd(sincosfd, Xpts, Ypts, c(1,0))

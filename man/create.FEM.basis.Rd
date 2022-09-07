@@ -95,16 +95,16 @@ create.FEM.basis(pts, edg=NULL, tri, order=1, nquad=0)
   common but not necessary that the mesh be constructed so that data observation
   points are at the vertices of the triangles in the mesh.  This special case
   also leads to very fast computation of the smoothing surface.  In some cases,
-  it may make sense to interpolate data to pre-specified mesh points before
+  it may make sense to interpolate data to prespecified mesh points before
   undertaking smoothing.
 
   Piecewise linear basis functions are generally preferable unless estimates
   of the second partial derivatives of the surface are required because
-  quadratic elements requre twice as many basi functions.  First order
+  quadratic elements require twice as many basis functions.  First order
   partial derivatives of surfaces are piecewise constant over each  triangle.
   Even though the estimated surface is piecewise linear, its total
   curvature is still controlled by the size of the smoothing parameter
-  specifed in function \code{smooth.FEM.basis}.  The larger the smoothing
+  specified in function \code{smooth.FEM.basis}.  The larger the smoothing
   parameter, the more flat the surface will become.
 
 }

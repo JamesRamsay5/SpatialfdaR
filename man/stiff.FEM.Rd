@@ -14,10 +14,10 @@
   \item{FEMbasis}{A List object produced by function \code{create.FEM.basis}.
     It contains:
     \itemize{
-        \item{ORDER}{The order of the element (1 or 2).}
-        \item{NODES}{Coordinates of node points.}
-        \item{NODEINDEX}{Indices of node points for each element.}
-        \item{JVEC}{acobian of the affine transformation of each
+        \item{order}{The order of the element (1 or 2).}
+        \item{nodes}{Coordinates of node points.}
+        \item{nodeindex}{Indices of node points for each element.}
+        \item{jvec}{acobian of the affine transformation of each
                       element to the master element.}
     }
   }
@@ -27,10 +27,9 @@
   of products of nodal basis functions.
   For each element i, the integral of the product
   of the j'th and k'th second partial derivatives of the
-  shape functions over the i'th element is
-        computed.  Then that value is the
-        \code{(NODEINDEX[i,j],NODEINDEX[i,k])}th entry of the
-        	ith elemental stiff matrix.
+  shape functions over the i'th element is computed.  Then that value 
+  is the \code{(nodeindex[i,j],nodeindex[i,k])}th entry of the i'th 
+  elemental stiff matrix.
 }
 \references{
   Sangalli, Laura M., Ramsay, James O., Ramsay, Timothy O. (2013),

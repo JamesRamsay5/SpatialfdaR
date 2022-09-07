@@ -32,3 +32,14 @@
 \seealso{
   \code{\link{plotFEM.fd}}
 }
+\examples{
+#  Set up and plot a square with side length one with 32 interior triangles,
+#  and then create an order one functional basis object of type FEM.
+m <- 4
+petList <- squareMesh(m)
+pts <- petList$p
+edg <- petList$e
+tri <- petList$t
+pts <- pts/m
+plotFEM.mesh(pts, tri)
+}

@@ -10,7 +10,7 @@ eval.FEM.fd(pts, fdobj, nderivs=rep(0,2))
 \arguments{
   \item{pts}{A two column matrix of pts within a triangular mesh.}
   \item{fdobj}{A functional data object with an FEM basis.}``1   
-  \item{nderivs}{A vector of length 2 contaning derivative orders with respect 
+  \item{nderivs}{A vector of length 2 containing derivative orders with respect 
   to the X and Y coordinates of the triangular mesh.  The derivative orders are
   restricted to 0, 1 or 2, and 2 can only be used for a quadratic basis system.
   The default is both orders being 0.}

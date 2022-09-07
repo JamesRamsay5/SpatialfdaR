@@ -19,9 +19,7 @@ insideIndex(obspts, pts, tri, tricoef)
   \item{tri}{
     A three-column matrix of the indices in \code{pts} of the triangle vertices.
   }
-  \item{tricoef}{
-    Four-column matrix of coefficients for computing barycentric coordinates.
-  }
+  \item{tricoef}{Four-column matrix of coefficients for computing barycentric coordinates.}
 }
 \details{
   Each triangle is checked to see if the point is contained within it or on its boundary.  
