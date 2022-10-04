@@ -5,16 +5,13 @@ plotFEM.fd <- function(fdobj, Xgrid=NULL, Ygrid=NULL, nderivs=rep(0,2),
   # PLOT  Plots a FEM object FDOBJ over a rectangular grid defined by
   # vectors Xgrid and Ygrid
 
-  #  Last modified 13 December 2021 by Jim Ramsay.
+  #  Last modified 3 October 2022 by Jim Ramsay.
 
   if (!is.fd(fdobj)) stop('FDOBJ is not an fd object')
   FEMbasis <- fdobj$basis
-
   coefmat <- as.matrix(fdobj$coefs)
   nsurf   <- dim(coefmat)[[2]]
-
   pts <- FEMbasis$params$p
-
   if (is.null(Xgrid))
   {
     xmin  <- min(pts[,1])
@@ -26,7 +23,6 @@ plotFEM.fd <- function(fdobj, Xgrid=NULL, Ygrid=NULL, nderivs=rep(0,2),
     xmax  <- max(Xgrid)
     nx    <- length(Xgrid)
   }
-
   if (is.null(Ygrid))
   {
     ymin <- min(pts[,2])
@@ -38,13 +34,12 @@ plotFEM.fd <- function(fdobj, Xgrid=NULL, Ygrid=NULL, nderivs=rep(0,2),
     ymax  <- max(Ygrid)
     ny    <- length(Ygrid)
   }
-
   Xvec  <- matrix(outer(Xgrid,rep(1,ny)),nx*ny,1)
   Yvec  <- matrix(outer(rep(1,nx),Ygrid),nx*ny,1)
   XYpts <- cbind(Xvec,Yvec)
-
   evalmat <- eval.FEM.fd(XYpts, fdobj, nderivs)
-
+  oldpar <- par(no.readonly = TRUE)    
+  on.exit(par(oldpar))            
   aski  <- FALSE
   for (isurf in 1:nsurf) {
     if (nsurf > 1) {
@@ -56,8 +51,6 @@ plotFEM.fd <- function(fdobj, Xgrid=NULL, Ygrid=NULL, nderivs=rep(0,2),
     zlen <- 50
     colorlut <- heat.colors(zlen) # height color lookup table
     col <- colorlut[ zlen*(evalmati - zlim[1])/(zlim[2]-zlim[1]) + 1 ]
-    #  purple color
-    # col = "#AAAAFF"
     rgl::persp3d(as.numeric(Xgrid),as.numeric(Ygrid), evalmati, color = col, 
                    xlab=xlab, ylab=ylab, zlab=zlab)
   }

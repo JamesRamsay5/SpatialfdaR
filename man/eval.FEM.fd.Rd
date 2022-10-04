@@ -36,9 +36,7 @@ Jim Ramsay
 #  ----------------------------------------------------------------------------
 #  Set up a FEM object with a approximatedly circular boundary with 12 sides,
 #  and two rings of 12 points plus a point at the centre.
-
 angle = seq(0,11*pi/6,len=12)
-
 #  define the 24 point locations
 rad = 2
 ctr = c(0,0)
@@ -47,16 +45,13 @@ pts[ 1:12,1] = rad*cos(angle)   + ctr[1]
 pts[ 1:12,2] = rad*sin(angle)   + ctr[2]
 pts[13:24,1] = rad*cos(angle)/2 + ctr[1]
 pts[13:24,2] = rad*sin(angle)/2 + ctr[2]
-
 #  define the edge indices
-
 edg <- matrix(0,12,2)
 for (i in 1:11) {
   edg[i,1] <- i
   edg[i,2] <- i+1
 }
 edg[12,] <- c(12,1)
-
 #  use delaunay triangulation to define the triangles
 tri = delaunayn(pts)
 plotFEM.mesh(pts, tri, shift = 0.02)

@@ -164,9 +164,7 @@ Jim Ramsay
 #  ----------------------------------------------------------------------------
 #  Set up a FEM object with a approximatedly circular boundary with 12 sides,
 #  and two rings of 12 points plus a point at the centre.
-
 angle = seq(0,11*pi/6,len=12)
-
 #  define the 24 point locations
 rad = 2
 ctr = c(0,0)
@@ -175,87 +173,37 @@ pts[ 1:12,1] = rad*cos(angle)   + ctr[1]
 pts[ 1:12,2] = rad*sin(angle)   + ctr[2]
 pts[13:24,1] = rad*cos(angle)/2 + ctr[1]
 pts[13:24,2] = rad*sin(angle)/2 + ctr[2]
-
 npts = nrow(pts)
-#  25 pts
-
 #  define the edge indices
-
 edg <- matrix(0,12,2)
 for (i in 1:11) {
   edg[i,1] <- i
   edg[i,2] <- i+1
 }
 edg[12,] <- c(12,1)
-
 #  use delaunay triangulation to define the triangles
 #  These geometry and RTriangle packages give different but legitimate answers
-
-# tri_RG <- RTriangle::triangulate(pts)
-# plotFEM.mesh(pts, tri_RG, nonum=FALSE, shift = 0.1)
-# FEMbasis_RG <- create.FEM.basis(pts, edg, tri_RG, 1)
-
 tri_GM <- geometry::delaunayn(pts)
 plotFEM.mesh(pts, tri_GM, nonum=FALSE, shift = 0.1)
 FEMbasis_GM <- create.FEM.basis(pts, edg, tri_GM, 1)
-
-#  input meshes from text files
-
-# tri_RG = scan("R/tri_RG.txt",0)
-# tri_RG = matrix(tri_RG,36,3,byrow=TRUE)
-
-# tri_GM = scan("R/tri_GM.txt",0)
-# tri_GM = matrix(tri_GM,36,4,byrow=TRUE)
-# tri_GM = tri_GM[,2:4]
-
 ntri <- nrow(tri_GM)
-
-#  36 triangles
-
 #  plot the two meshes
-
-# plotFEM.mesh(pts, tri_RG, nonum=FALSE, shift = 0.1)
-# title("A 25-point circular mesh from RTriangle")
-
 plotFEM.mesh(pts, tri_GM, nonum=FALSE, shift = 0.1)
 title("A 25-point circular mesh from geometry")
-
 #  set up the FEM basis objects
-
-# FEMbasis_RG <- create.FEM.basis(pts, edg, tri_RG, 1)
 FEMbasis_GM <- create.FEM.basis(pts, edg, tri_GM, 1)
-
 #  locations of locations and data  (kept same for both triangulations)
-
 nobs <- 201
-# FEMloc <- scan("R/FEMloc.txt",0)
-# FEMloc <- matrix(FEMloc, nobs, 3, byrow=TRUE)
-# FEMloc <- FEMloc[,2:3]
-# FEMdata <- scan("R/FEMdata.txt",0)
-# FEMdata <- matrix(FEMdata, nobs, 2, byrow=TRUE)
-# FEMdata <- FEMdata[,2]
-
 FEMloc <- randomFEMpts(nobs, pts, tri_GM)
-# points(FEMloc)
-
 #  heights of a hemisphere at these locations (kept same for both triangulations)
-
 sig <- 0.2
 FEMdata <- sqrt(4 - FEMloc[,1]^2 - FEMloc[,2]^2) + 
   matrix(rnorm(nobs),nobs,1)*sig
-  
 #  Smooth the data 
-
-# FEMList_RG <- smooth.FEM.basis(FEMloc, FEMdata, FEMbasis_RG, lambda=1e-1)
-# FEMfd_RG <- FEMList_RG$fd
-# round(FEMList_RG$SSE,3)
-# round(FEMList_RG$df,3)
-
 FEMList_GM <- smooth.FEM.basis(FEMloc, FEMdata, FEMbasis_GM, lambda=1)
 FEMfd_GM <- FEMList_GM$fd
 round(FEMList_GM$SSE,3)
 round(FEMList_GM$df,3)
-
 Xgrid = seq(-2,2,len=21)
 Ygrid = seq(-2,2,len=21)
 #  plot the result

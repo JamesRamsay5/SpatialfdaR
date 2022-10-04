@@ -50,7 +50,8 @@ SinCosIntensFn <- function(x,y) {
 intDensityVec <- triDensity(pts, tri, SinCosIntensFn)
 #  Set up and plot an FEM basis object
 SquareBasis1 <- create.FEM.basis(pts, edg, tri)
-par(cex.lab=2)
+oldpar <- par(cex.lab=2)
+on.exit(par(oldpar))
 plotFEM.mesh(pts, tri)
 #  generate random points
 N = 1000

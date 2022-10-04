@@ -1,5 +1,5 @@
 smooth.FEM.density <- function(obspts, cvec, FEMbasis, K1=NULL, lambda=0,
-                              conv=.0001, iterlim=50, dbglev=0)
+                              conv=.0001, iterlim=50, dbglev=FALSE)
 {
   #  Compute a smooth FEM density surface of a triangulated region.
   #  Arguments:
@@ -26,7 +26,7 @@ smooth.FEM.density <- function(obspts, cvec, FEMbasis, K1=NULL, lambda=0,
   #  INTENSITYFD ... Functional data object for the intensity function
   #  FLIST       ... List with members F, grad and norm values at convergence
   
-  # Last modified 22 December 2020 by Jim Ramsay
+  # Last modified 3 October 2022 by Jim Ramsay
 
   #  check OBSPTS
 

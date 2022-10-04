@@ -96,9 +96,7 @@ result <- FEMdensity(cvec0, obspts, RtTriBasis)
 print(paste("Function value =",result$F))
 print("gradient:")
 print(result$grad)
-
 #  ---------- density on a unit square,  4 triangles, 5 nodes  ----------
-
 #  Generate a unit square with a node in its center defining four
 #  triangles and five nodes.
 result <- squareMesh(1)
