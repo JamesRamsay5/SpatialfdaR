@@ -51,7 +51,6 @@ intDensityVec <- triDensity(pts, tri, SinCosIntensFn)
 #  Set up and plot an FEM basis object
 SquareBasis1 <- create.FEM.basis(pts, edg, tri)
 oldpar <- par(cex.lab=2)
-on.exit(par(oldpar))
 plotFEM.mesh(pts, tri)
 #  generate random points
 N = 1000
@@ -60,5 +59,6 @@ obspts <- randomFEMpts(N, pts, tri, intDensityVec)
 points(obspts[,1],obspts[,2])
 #  find the triangle number containing each point
 triIndex <- insideIndex(obspts, pts, tri)
+par(oldpar)
 }
 \keyword{insideIndex}

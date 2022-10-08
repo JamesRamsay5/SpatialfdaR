@@ -76,10 +76,12 @@ Npts <- 21
 Xpts <- seq(0,1,len=Npts)
 Ypts <- Xpts
 #  plot the surface
+oldpar <- par(no.readonly = TRUE)
 plotFEM.fd(sincosfd, Xpts, Ypts)
 #  plot the X partial derivative of the surface
 plotFEM.fd(sincosfd, Xpts, Ypts, c(1,0))
 #  plot the Y partial derivative of the surface
 plotFEM.fd(sincosfd, Xpts, Ypts, c(0,1))
+par(oldpar)
 }
 \keyword{plotFEM.fd}

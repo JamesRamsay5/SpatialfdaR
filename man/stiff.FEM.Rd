@@ -17,7 +17,7 @@
         \item{order}{The order of the element (1 or 2).}
         \item{nodes}{Coordinates of node points.}
         \item{nodeindex}{Indices of node points for each element.}
-        \item{jvec}{acobian of the affine transformation of each
+        \item{jvec}{jacobian of the affine transformation of each
                       element to the master element.}
     }
   }

@@ -20,7 +20,7 @@ smooth.FEM.density(obspts, cvec, FEMbasis, K1=NULL, lambda=0,
   mesh.}
   \item{cvec}{A matrix each column of which contains the coefficients
   for an FEM basis function expansion of a surface.
-  The number of coeffficients equals the number of vertices in the
+  The number of coefficients equals the number of vertices in the
   triangulation, also called the nodes of the FEM expansion.}
   \item{FEMbasis}{This argument provides the FEM basis (class \code{basisfd}),
   and may be in the form of an FEM basis object, an FEM function object

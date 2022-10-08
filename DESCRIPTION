@@ -3,11 +3,12 @@ Type: Package
 Date: 2022-10-03
 Version: 1.0.0
 Title: Spatial Functional Data Analysis
-Author: James Ramsay [aut,cre]
+Author: J. O. Ramsay <ramsay@psych.mcgill.ca> [aut,cre], 
+ Spencer Graves <spencer.graves@effectivedefense.org> [ctb]
 Maintainer: James Ramsay <james.ramsay@mcgill.ca>
 Depends: R (>= 3.5.0), fda, splines, graphics, rgl, geometry
 Description:   
-  Finite element analysis (FEM) uses meshes of triangles to define surfaces.  
+  Finite element modeling (FEM) uses meshes of triangles to define surfaces.  
   A surface within a triangle may be either linear or quadratic. 
   In the order one case each node in the mesh is associated with a basis 
   function and the basis is called the order one finite element basis.
