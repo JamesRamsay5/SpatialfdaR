@@ -1,10 +1,14 @@
 Package: SpatialfdaR
 Type: Package
-Date: 2022-10-03
+Date: 2022-10-10
 Version: 1.0.0
 Title: Spatial Functional Data Analysis
-Author: J. O. Ramsay <ramsay@psych.mcgill.ca> [aut,cre], 
- Spencer Graves <spencer.graves@effectivedefense.org> [ctb]
+Authors@R: c(person("James", "Ramsay", role=c("aut","cre"),
+          email="james.ramsay@mcgill.ca"), 
+          person("Spencer", "Graves", role="ctb",
+          email="spencer.graves@effectivedefense.org"))
+Author: James Ramsay [aut, cre], 
+        Spencer Graves [ctb]
 Maintainer: James Ramsay <james.ramsay@mcgill.ca>
 Depends: R (>= 3.5.0), fda, splines, graphics, rgl, geometry
 Description:   
