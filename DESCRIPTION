@@ -1,6 +1,6 @@
 Package: SpatialfdaR
 Type: Package
-Date: 2022-10-10
+Date: 2022-12-24
 Version: 1.0.0
 Title: Spatial Functional Data Analysis
 Authors@R: c(person("James", "Ramsay", role=c("aut","cre"),
